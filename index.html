@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FurniHub - Premium Furniture Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><i class="fas fa-chair"></i> FurniHub</div>
+            <div class="search-container">
+                <input type="text" id="searchBar" class="search-input" placeholder="Search furniture..." onkeyup="searchProducts()">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cart" class="cart-icon"><i class="fas fa-shopping-cart"></i> Cart <span class="cart-count">0</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="video-hero">
+            <img src="image.jpg" alt="Hero Background">
+        </div>
+        <!-- Floating Furniture Elements -->
+        <div class="floating-furniture">
+            <div class="furniture-item item-1"><i class="fas fa-couch"></i></div>
+            <div class="furniture-item item-2"><i class="fas fa-chair"></i></div>
+            <div class="furniture-item item-3"><i class="fas fa-table"></i></div>
+            <div class="furniture-item item-4"><i class="fas fa-bed"></i></div>
+            <div class="furniture-item item-5"><i class="fas fa-sofa"></i></div>
+        </div>
+        <div class="hero-content">
+            <h1>Transform Your Space</h1>
+            <p>Discover our premium collection of furniture for every room</p>
+            <button class="cta-button" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">
+                <i class="fas fa-arrow-right"></i> Shop Now
+            </button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-truck"></i></div>
+                    <h3>Free Shipping</h3>
+                    <p>On orders over $100</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                    <h3>Quality Guarantee</h3>
+                    <p>100% authentic products</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                    <h3>24/7 Support</h3>
+                    <p>Always here to help</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-tag"></i></div>
+                    <h3>Best Prices</h3>
+                    <p>Competitive rates guaranteed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Collections</h2>
+                <p>Handpicked furniture for modern living</p>
+            </div>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="sofa"><i class="fas fa-couch"></i> Sofas</button>
+                <button class="filter-btn" data-filter="chair"><i class="fas fa-chair"></i> Chairs</button>
+                <button class="filter-btn" data-filter="table"><i class="fas fa-table"></i> Tables</button>
+                <button class="filter-btn" data-filter="bed"><i class="fas fa-bed"></i> Beds</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About FurniHub</h2>
+                <p>Your trusted furniture partner</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Premium Quality & Design</h3>
+                    <p>At FurniHub, we believe that quality furniture transforms houses into homes. Our carefully curated collection features modern designs, sustainable materials, and timeless pieces that blend style with comfort.</p>
+                    <ul class="about-features">
+                        <li><i class="fas fa-check"></i> Premium Quality Materials</li>
+                        <li><i class="fas fa-check"></i> Modern & Contemporary Designs</li>
+                        <li><i class="fas fa-check"></i> Affordable Pricing</li>
+                        <li><i class="fas fa-check"></i> Fast Delivery</li>
+                        <li><i class="fas fa-check"></i> Lifetime Support</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="l sofa.jpg" alt="Featured living room furniture" class="about-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Join thousands of satisfied customers</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Excellent quality and beautiful design! My living room looks amazing now. Highly recommend!"</p>
+                    <p class="testimonial-author"><i class="fas fa-user-circle"></i> Sarah Johnson</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Fast delivery and amazing customer service. The furniture exceeded my expectations!"</p>
+                    <p class="testimonial-author"><i class="fas fa-user-circle"></i> Michael Chen</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Best furniture store ever! The prices are competitive and the quality is unmatched."</p>
+                    <p class="testimonial-author"><i class="fas fa-user-circle"></i> Emily Davis</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Certifications Section -->
+    <section class="trust-section">
+        <div class="container">
+            <h2>Why Choose FurniHub?</h2>
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <div class="trust-icon"><i class="fas fa-award"></i></div>
+                    <h3>Award Winning</h3>
+                    <p>Recognized for excellence in furniture design and customer satisfaction</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon"><i class="fas fa-lock"></i></div>
+                    <h3>Secure Payment</h3>
+                    <p>SSL encrypted transactions for your peace of mind</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Eco-Friendly</h3>
+                    <p>Sustainable materials and responsible manufacturing practices</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>30-Day Guarantee</h3>
+                    <p>Full refund if not completely satisfied with your purchase</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2><i class="fas fa-envelope"></i> Subscribe to Our Newsletter</h2>
+                <p>Get exclusive deals and design tips delivered to your inbox</p>
+                <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit"><i class="fas fa-arrow-right"></i> Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>We'd love to hear from you</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <span class="info-icon"><i class="fas fa-map-marker-alt"></i></span>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Furniture Street, Design City, DC 12345</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon"><i class="fas fa-phone"></i></span>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (800) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon"><i class="fas fa-envelope"></i></span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>support@furnihub.com</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" onsubmit="handleContactForm(event)">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2><i class="fas fa-shopping-cart"></i> Shopping Cart</h2>
+            <div id="cartItems"></div>
+            <div class="cart-summary">
+                <p>Total: $<span id="cartTotal">0</span></p>
+                <button class="checkout-btn" onclick="checkout()"><i class="fas fa-credit-card"></i> Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Details Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="product-details">
+                <img id="detailImage" src="" alt="Product">
+                <div class="product-info">
+                    <h2 id="detailName"></h2>
+                    <p id="detailDescription"></p>
+                    <p class="price" id="detailPrice"></p>
+                    <div class="rating">
+                        <span id="detailRating"></span>
+                        <span id="detailReviews"></span>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><i class="fas fa-chair"></i> FurniHub</h4>
+                    <p>Your trusted furniture partner for modern living. Transform your space with style and comfort.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#products"><i class="fas fa-box"></i> Products</a></li>
+                        <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                        <li><a href="#contact"><i class="fas fa-phone"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FurniHub. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Warranty</a></p>
+                <div class="footer-badges">
+                    <span class="badge"><i class="fas fa-check-circle"></i> ISO 9001 Certified</span>
+                    <span class="badge"><i class="fas fa-shield-alt"></i> Secure & Verified</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
